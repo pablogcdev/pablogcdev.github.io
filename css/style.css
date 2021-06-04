@@ -1,110 +1,104 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+ /*Font Awesome Free Icon*/
+ @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+ /*Google fonts*/
+ @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Rubik:500,700,900&display=swap');
+
+ /* General Style */
+
+ body{
+     margin:0;
+     line-height: 1.5;
+     font-size: 16px;
+     font-family: 'Montserrat' , sans-serif;
+     font-weight: 400;
+ }
+ *{
+     margin: 0;
+     padding: 0;
+     outline: none;
+     text-decoration: none;
+     box-sizing: border-box;
+ }
+ ::before,::after{
+     box-sizing: border-box;
+ }
+
+ .section{
+     background-color: #f2f2fc;
+     min-height: 100vh;
+     display: block;
+ }
+
+ .main-section{
+     padding-left: 270px;
+ }
+
+ /* Side Section */
+
+ .side-section{
+     width: 270px;
+     background-color:#fdf9ff;
+     position: fixed;
+     height: 100%;
+     left: 0;
+     top: 0;
+     z-index: 10;
+     border-right: 1px solid #e8dfec;
+     padding: 30px;
+
+ }
+
+ /* Logo */
+ .side-section .logo{
+
+    padding: 30px 0;
+ }
+
+ .side-section .logo a{
+     font-size: 40px;
+     color: #302e4d;
+     font-family: 'Rubik', sans-serif;
+     font-weight: 700;
+     text-decoration: none;
+     display: inline-block;
+     padding:0 10px;
 }
 
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-color: #5D4954;
-}
-
-.logo{
-    color: rgb(226, 226, 226);
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 22px;
-}
-
-.nav-links{
-    display: flex;
-    justify-content: space-around;
-    width: 30%;
-}
-
-.nav-links li{
+/* Nav Bar */
+.side-section .nav{
+    margin: 80px 0;
     list-style: none;
-}
-.nav-links a{
-    color: rgb(226, 226, 226);
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
+    padding: 0;
 }
 
-.burger div{
-    width: 25px;
-    height: 3px;
-    background-color: rgb(226, 226, 226);
-    margin: 5px;
+.side-section .nav li{
+    display: block;
+
+}
+
+.side-section .nav li a{
+    font-size: 16px;
+    font-weight: 600;
+    color: #302e4d;
+    text-decoration: none;
+    line-height: 45px;
+    display: block;
+    border-bottom: 1px solid #e8dfec;
+
+    /*Animation when mouse is over text*/
+
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 
 }
 
-.burger{
-    display: none;
-    cursor: pointer;
+.side-section .nav li a:hover{
+    padding-left: 5px;
+    color: #ec1839;
+
 }
 
-@media screen and (max-width:1024px){
-    .nav-links{
-        display: flex;
-        justify-content: space-around;
-        width: 60%;
-    }
-}
-
-@media screen and (max-width:768px){
-    body{
-        overflow-x: hidden;
-    }
-    .nav-links{
-        position: absolute;
-        right: 0px;
-        height: 92vh;
-        top: 8vh;
-        background-color: #5D4954;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-    }
-    .nav-links li{
-        opacity: 0;
-    }
-    .burger{
-        display: block;
-    }
-}
-
-.nav-active{
-    transform: translateX(0%);
-}
-
-.toggle .line1{
-    transform: rotate(-45deg) translate(-5px,6px);
-}
-.toggle .line2{
-opacity: 0;}
-.toggle .line3{
-    transform: rotate(45deg) translate(-5px,-6px);
-}
-
-
-@keyframes navLinkFade{
-    from{
-        opacity: 0;
-        transform: translateX(50px);
-
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0px);
-    }
+.side-section .nav li a .fa{
+    margin: 5px;
 }
