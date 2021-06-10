@@ -5,7 +5,9 @@
  @import url('https://fonts.googleapis.com/css?family=Rubik:500,700,900&display=swap');
 
  /* General Style */
-
+ html {
+    scroll-behavior: smooth;
+  }
  body{
      margin:0;
      line-height: 1.5;
@@ -26,7 +28,6 @@
 
  .section{
      background-color: #f2f2fc;
-     min-height: 100vh;
      display: block;
      padding: 0 30px;
  }
@@ -154,7 +155,7 @@
 /* Home */
 
 .home{
-    min-height: 100vh;
+    min-height: 50vh;
     display: -ms-flexbox;
     display: flex;
 
@@ -454,6 +455,12 @@
 /* Responsive */
 
 @media (max-width: 1199px){
+    .home{
+        min-height: 100vh;
+        display: -ms-flexbox;
+        display: flex;
+    
+    }
     .side-section{
         left: -270px;
     }
