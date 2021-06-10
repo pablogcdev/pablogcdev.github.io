@@ -398,8 +398,8 @@
 .projects .projects-item{
     flex: 0 0 33.33%;
     max-width: 33.33%;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px;
+
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
 
@@ -450,3 +450,38 @@
     text-decoration: none;
     font-weight: 600;
 }
+
+
+/* Responsive */
+
+@media (max-width: 1199px){
+    .side-section{
+        left: -270px;
+    }
+    .main-section{
+        padding-left: 0;
+    }
+    .about .about-content .personal-info .info-item p span{
+        display: block;
+        margin-left: 0;
+    }
+}
+@media (max-width: 991px){
+    .projects .projects-item{
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 767px){
+    .projects .projects-item,
+    .about .about-content .education,
+    .about .about-content .experience,
+    .about .about-content .personal-info{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
